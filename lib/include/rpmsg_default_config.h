@@ -33,7 +33,12 @@
 #ifndef RPMSG_DEFAULT_CONFIG_H_
 #define RPMSG_DEFAULT_CONFIG_H_
 
+#include <rtthread.h>
+#ifdef PKG_RPMSG_LITE_CUSTOM_CONFIG
 #define RL_USE_CUSTOM_CONFIG (1)
+#else
+#define RL_USE_CUSTOM_CONFIG (0)
+#endif
 
 #if RL_USE_CUSTOM_CONFIG
 #include "rpmsg_config.h"
